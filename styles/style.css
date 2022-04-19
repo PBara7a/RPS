@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div {
+  display: inline;
+}
+
+.center-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.auto-column-grid {
+  display: grid;
+  grid-auto-flow: column;
+}

@@ -44,3 +44,12 @@ function playGame(numberOfRoundsToWin) {
   
   playerPoints > computerPoints ? window.alert(`You won!`) : window.alert(`You lost!`);
 }
+
+const options = document.querySelectorAll('.option')
+options.forEach((option) => {
+  option.addEventListener('click', (e) => {
+    const player = plays[e.target.alt]
+    const computer = computerSelectionValue()
+    playRound(player, computer)
+  })
+})
