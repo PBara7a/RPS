@@ -10,6 +10,14 @@ const plays = {
 let playerPoints = 0;
 let computerPoints = 0;
 
+const playerScore = document.createElement('p')
+playerScore.textContent = playerPoints
+document.querySelector('.player').append(playerScore)
+
+const computerScore = document.createElement('p')
+computerScore.textContent = computerPoints
+document.querySelector('.computer').append(computerScore)
+
 function computerSelectionValue() {
   return Math.floor(Math.random() * 3);
 }
@@ -24,10 +32,12 @@ function playRound(playerValue, computerValue) {
   switch (result) {
     case 2:
       playerPoints++;
+      playerScore.textContent = playerPoints
       window.alert(`You Win! ${plays[playerValue]} beats ${plays[computerValue]}`);
       break;
     case 1:
       computerPoints++
+      computerScore.textContent = computerPoints
       window.alert(`You Lose! ${plays[computerValue]} beats ${plays[playerValue]}`);
       break;
     default:
