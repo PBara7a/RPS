@@ -25,7 +25,18 @@ div {
 
 .auto-column-grid {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: auto auto auto auto;
   place-items: center;
   margin-bottom: 100px;
+}
+
+.five-column-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 0.5fr auto 1fr;
+  place-items: center;
+  margin-bottom: 100px;
+}
+
+.text-align--center {
+  text-align: center;
 }

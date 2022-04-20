@@ -12,10 +12,12 @@ let computerPoints = 0;
 
 const playerScore = document.createElement('p')
 playerScore.textContent = playerPoints
+playerScore.className = 'text-align--center'
 document.querySelector('.player').append(playerScore)
 
 const computerScore = document.createElement('p')
 computerScore.textContent = computerPoints
+computerScore.className = 'text-align--center'
 document.querySelector('.computer').append(computerScore)
 
 function computerSelectionValue() {

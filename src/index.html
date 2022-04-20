@@ -11,32 +11,44 @@
 
 <body>
   <h1>Rock, Paper, Scissors!</h1>
-  <main class="center-wrapper">
-    <div class="auto-column-grid">
-      <div>
-        <img id="rock" class="option"
-          src="https://cdn-icons.flaticon.com/png/512/835/premium/835024.png?token=exp=1650407663~hmac=d9cf2faed1e5ff70a4477dc5ad2feb73"
-          alt="rock" width="64px" height="64px">
+  <main>
+
+    <div class="center-wrapper">
+      <div class="five-column-grid">
+        <div class="spacer"></div>
+
+        <div>
+          <img id="rock" class="option"
+            src="https://cdn-icons.flaticon.com/png/512/835/premium/835024.png?token=exp=1650407663~hmac=d9cf2faed1e5ff70a4477dc5ad2feb73"
+            alt="rock" width="64px" height="64px">
+        </div>
+        <div>
+          <img id="paper" class="option"
+            src="https://cdn-icons.flaticon.com/png/512/737/premium/737804.png?token=exp=1650408006~hmac=3ba0547adcae227f4e21a80aa9d053a1"
+            alt="paper" width="64px" height="64px">
+        </div>
+        <div>
+          <img id="scissors" class="option"
+            src="https://cdn-icons.flaticon.com/png/512/737/premium/737812.png?token=exp=1650407955~hmac=8173da71982d54fd490019963b8f6bd6"
+            alt="scissors" width="64px" height="64px">
+        </div>
+        <div class="spacer"></div>
       </div>
-      <div>
-        <img id="paper" class="option"
-          src="https://cdn-icons.flaticon.com/png/512/737/premium/737804.png?token=exp=1650408006~hmac=3ba0547adcae227f4e21a80aa9d053a1"
-          alt="paper" width="64px" height="64px">
+
+      <div class="results auto-column-grid">
+        <div class="spacer"></div>
+        <div class="player">
+          <h2>Player</h2>
+        </div>
+
+        <div class="computer">
+          <h2>Computer</h2>
+        </div>
+        <div class="spacer"></div>
       </div>
-      <div>
-        <img id="scissors" class="option"
-          src="https://cdn-icons.flaticon.com/png/512/737/premium/737812.png?token=exp=1650407955~hmac=8173da71982d54fd490019963b8f6bd6"
-          alt="scissors" width="64px" height="64px">
-      </div>
+
     </div>
-    <div class="results auto-column-grid">
-      <div class="player">
-        <h2>Player</h2>
-      </div>
-      <div class="computer">
-        <h2>Computer</h2>
-      </div>
-    </div>
+
   </main>
 </body>
 <script src="./rps.js"></script>
