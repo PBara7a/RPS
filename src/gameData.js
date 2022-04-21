@@ -7,7 +7,7 @@ export const gameData = {
     1: 'Paper',
     2: 'Scissors'
   },
-  numberOfRoundsToWin: 3,
+  numberOfRoundsToWin: 5,
   playerPoints: 0,
   computerPoints: 0
 }
