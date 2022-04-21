@@ -1,29 +1,57 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 :root {
-  --main-bg-color: rgb(0, 6, 32);
-  --secondary-bg-color: rgb(32, 38, 59);
-  --secondary-bg-color-hover: rgb(58, 64, 88);
+  --header-bg-color: rgb(0, 6, 32);
+  --main-bg-color: rgb(32, 38, 59);
+  --secondary-bg-color: rgb(0, 6, 32);
+  --secondary-bg-color-hover: rgba(0, 6, 32, 0.538);
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   color: white;
-  background-color: var(--main-bg-color);
+  background-color: var(--secondary-bg-color);
+
+  margin: 0;
+  min-height: 100vh;
 }
 
 h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  font-family: 'Black Ops One';
   text-align: center;
-  margin-bottom: 80px;
+  margin: 0;
 }
 
-div {
-  display: inline;
+h3 {
+  margin-top: 0;
 }
 
 /*------ COMPONENTS ------*/
+header {
+  height: 5.5rem;
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--header-bg-color);
+}
+
+.scoreboard {
+  margin: 2rem 0;
+}
+
+.playerSide {
+  display: grid;
+  place-items: end;
+}
+
+.computerSide {
+  display: grid;
+  place-items: start;
+}
+
 .option {
   display: grid;
   place-items: center;
@@ -31,7 +59,6 @@ div {
   width: 150px;
 
   background-color: var(--secondary-bg-color);
-
   border-radius: 15px;
 }
 
@@ -45,29 +72,42 @@ div {
   transition-duration: 0.1s;
 }
 
+.gameBoard {
+  background-color: var(--main-bg-color);
+
+  border-radius: 25px;
+  padding: 2rem;
+}
+
 /*------- LAYOUT --------*/
+
 .center-wrapper {
-  max-width: 1024px;
-  margin: 80 auto;
-  padding: 0 16px;
+  display: grid;
+  place-items: center;
+  max-width: 1280px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
 }
 
-.auto-column-grid {
+.grid-auto-columns {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  place-items: center;
-  margin-bottom: 100px;
+  grid-auto-flow: column;
 }
 
-.five-column-grid {
+.three-column-grid {
   display: grid;
-  grid-template-columns: 1fr auto 0.5fr auto 1fr;
+  grid-template-columns: repeat(3, auto);
   place-items: center;
-  margin-bottom: 100px;
 }
 
 
 /*--------- UTILITIES -----------*/
-.text-align--center {
-  text-align: center;
+.gap-bg {
+  gap: 2rem;
+}
+
+.center-grid {
+  display: grid;
+  place-items: center;
 }

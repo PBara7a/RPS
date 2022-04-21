@@ -6,39 +6,65 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/img/scissors.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Poppins&display=swap" rel="stylesheet">
   <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-  <h1>Rock, Paper, Scissors!</h1>
-  <main>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
 
-    <div class="center-wrapper">
-      <div class="five-column-grid">
-        <div class="spacer"></div>
+  <main class="center-wrapper">
 
-        <div class="option">
-          <img id="rock" src="/img/rock.png" alt="rock" width="64px" height="64px">
+    <div class="gameBoard">
+
+      <div class="center-grid">
+        <h2>Choose your weapon</h2>
+        <h3>👑 First to win 5 rounds! 👑</h3>
+
+        <div class="scoreboard grid-auto-columns gap-bg">
+          <div class="playerSide">
+            <div class="center-grid">
+              <div class="weapon-frame">
+                <img
+                  src="https://cdn-icons.flaticon.com/png/512/1477/premium/1477009.png?token=exp=1650553612~hmac=cd45c1cb931f5f200bf2576608ac6e7f"
+                  alt="weapon" width="84px" height="84px">
+              </div>
+              <p class="player-score">
+                Player: 0
+              </p>
+            </div>
+          </div>
+
+          <div class="computerSide">
+            <div class="center-grid">
+              <div class="weapon-frame">
+                <img
+                  src="https://cdn-icons.flaticon.com/png/512/1477/premium/1477009.png?token=exp=1650553612~hmac=cd45c1cb931f5f200bf2576608ac6e7f"
+                  alt="weapon" width="84px" height="84px">
+              </div>
+              <p class="computer-score">
+                Computer: 0
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="option">
-          <img id="paper" src="/img/paper.png" alt="paper" width="64px" height="64px">
-        </div>
-        <div class="option">
-          <img id="scissors" src="/img/scissors.png" alt="scissors" width="64px" height="64px">
-        </div>
-        <div class="spacer"></div>
       </div>
 
-      <div id="results" class="auto-column-grid">
-        <div class="spacer"></div>
-        <div class="player">
-          <h2>Player</h2>
+      <div class="three-column-grid gap-bg">
+        <div class="option">
+          <img id="rock" src="/img/Rock.png" alt="Rock" width="64px" height="64px">
         </div>
-
-        <div class="computer">
-          <h2>Computer</h2>
+        <div class="option">
+          <img id="paper" src="/img/Paper.png" alt="Paper" width="64px" height="64px">
         </div>
-        <div class="spacer"></div>
+        <div class="option">
+          <img id="scissors" src="/img/Scissors.png" alt="Scissors" width="64px" height="64px">
+        </div>
       </div>
 
     </div>
