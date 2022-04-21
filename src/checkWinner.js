@@ -1,13 +1,12 @@
-import resetGame from "./resetGame.js"
 import { gameData } from "./gameData.js"
+import { endGameWindow, endGameMsg } from "./UI.js"
 
 export default function checkWinner() {
   if (gameData.playerPoints == gameData.numberOfRoundsToWin) {
-    window.alert(`You won!`)
-    resetGame()
+    endGameWindow.className += ' end-game-window__show'
   }
   if (gameData.computerPoints == gameData.numberOfRoundsToWin) {
-    window.alert(`You lost!`)
-    resetGame()
+    endGameMsg.innerText = 'You Lost...'
+    endGameWindow.className += ' end-game-window__show'
   }
 }

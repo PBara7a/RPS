@@ -65,6 +65,7 @@ header {
 .option:hover {
   background-color: var(--secondary-bg-color-hover);
   transition-duration: 0.1s;
+  cursor: pointer;
 }
 
 .option:hover img {
@@ -77,6 +78,38 @@ header {
 
   border-radius: 25px;
   padding: 2rem;
+}
+
+.end-game-window {
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  margin: auto;
+  width: 400px;
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: var(--header-bg-color);
+  font-size: 1.5rem;
+  transform: scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.end-game-window__show {
+  transform: scale(1);
+}
+
+.restart-btn {
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.restart-btn:hover {
+  background-color: rgb(61, 67, 91);
 }
 
 /*------- LAYOUT --------*/

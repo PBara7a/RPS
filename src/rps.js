@@ -1,5 +1,6 @@
 import playRound from "./playRound.js"
 import computerSelectionValue from "./computerSelection.js"
+import resetGame from "./resetGame.js"
 import { gameData } from "./gameData.js"
 
 const options = document.querySelectorAll('.option')
@@ -10,3 +11,6 @@ options.forEach((option) => {
     playRound(player, computer)
   })
 })
+
+const restartBtn = document.querySelector('.restart-btn')
+restartBtn.addEventListener('click', () => resetGame())
