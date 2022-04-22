@@ -6,11 +6,7 @@ import { gameData } from "./gameData.js"
 const options = document.querySelectorAll('.option')
 options.forEach((option) => {
   option.addEventListener('click', (e) => {
-    let player
-    e.target.alt ?
-      player = gameData.plays[e.target.alt] :
-      player = gameData.plays[e.srcElement.childNodes[1].alt]
-
+    const player = gameData.plays[e.target.dataset.weapon]
     const computer = computerSelectionValue()
     playRound(player, computer)
   })
