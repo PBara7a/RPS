@@ -1,4 +1,4 @@
-export const gameData = {
+export const gameState = {
   plays: {
     Rock: 0,
     Paper: 1,

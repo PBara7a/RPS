@@ -1,12 +1,12 @@
 import playRound from "./playRound.js"
 import computerSelectionValue from "./computerSelection.js"
 import resetGame from "./resetGame.js"
-import { gameData } from "./gameData.js"
+import { gameState } from "./gameState.js"
 
 const options = document.querySelectorAll('.option')
 options.forEach((option) => {
   option.addEventListener('click', (e) => {
-    const player = gameData.plays[e.target.dataset.weapon]
+    const player = gameState.plays[e.target.dataset.weapon]
     const computer = computerSelectionValue()
     playRound(player, computer)
   })

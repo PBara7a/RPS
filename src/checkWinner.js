@@ -1,11 +1,11 @@
-import { gameData } from "./gameData.js"
+import { gameState } from "./gameState.js"
 import { endGameWindow, endGameMsg } from "./UI.js"
 
 export default function checkWinner() {
-  if (gameData.playerPoints == gameData.numberOfRoundsToWin) {
+  if (gameState.playerPoints == gameState.numberOfRoundsToWin) {
     endGameWindow.className += ' end-game-window__show'
   }
-  if (gameData.computerPoints == gameData.numberOfRoundsToWin) {
+  if (gameState.computerPoints == gameState.numberOfRoundsToWin) {
     endGameMsg.innerText = 'You Lost...'
     endGameWindow.className += ' end-game-window__show'
   }

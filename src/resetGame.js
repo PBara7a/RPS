@@ -1,8 +1,8 @@
-import { gameData } from "./gameData.js"
+import { gameState } from "./gameState.js"
 
 export default function resetGame() {
-  gameData.playerPoints = 0
-  gameData.computerPoints = 0
+  gameState.playerPoints = 0
+  gameState.computerPoints = 0
 
   window.location.reload()
 }

@@ -1,5 +1,5 @@
 import checkWinner from './checkWinner.js'
-import { gameData } from './gameData.js'
+import { gameState } from './gameState.js'
 import {roundResult, roundDescription, playerScore, computerScore} from './UI.js'
 import updateWeapons from './updateWeapons.js'
 
@@ -8,20 +8,20 @@ export default function playRound(playerValue, computerValue) {
   const result = (3 + computerValue - playerValue) % 3
   switch (result) {
     case 2:
-      gameData.playerPoints++
-      playerScore.innerText = `Player: ${gameData.playerPoints}`
+      gameState.playerPoints++
+      playerScore.innerText = `Player: ${gameState.playerPoints}`
       roundResult.innerText = 'You Win!'
-      roundDescription.innerText = `${gameData.plays[playerValue]} beats ${gameData.plays[computerValue]}`
+      roundDescription.innerText = `${gameState.plays[playerValue]} beats ${gameState.plays[computerValue]}`
       break
     case 1:
-      gameData.computerPoints++
-      computerScore.innerText = `Computer: ${gameData.computerPoints}`
+      gameState.computerPoints++
+      computerScore.innerText = `Computer: ${gameState.computerPoints}`
       roundResult.innerText = 'You Lost!'
-      roundDescription.innerText = `${gameData.plays[computerValue]} beats ${gameData.plays[playerValue]}`
+      roundDescription.innerText = `${gameState.plays[computerValue]} beats ${gameState.plays[playerValue]}`
       break
     default:
       roundResult.innerText = "It's a tie!"
-      roundDescription.innerText = `${gameData.plays[computerValue]} ties with ${gameData.plays[playerValue]}`
+      roundDescription.innerText = `${gameState.plays[computerValue]} ties with ${gameState.plays[playerValue]}`
   }
       checkWinner()
 }
